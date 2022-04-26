@@ -1,27 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<% int q_1 = Integer.parseInt(request.getParameter("q_1")); %>
-<% int q_2 = Integer.parseInt(request.getParameter("q_2")); %>
-<% int q_3 = Integer.parseInt(request.getParameter("q_3")); %>
-<% int q_4 = Integer.parseInt(request.getParameter("q_4")); %>
-<% int q_5 = Integer.parseInt(request.getParameter("q_5")); %>
-<% int q_6 = Integer.parseInt(request.getParameter("q_6")); %>
-<% int q_7 = Integer.parseInt(request.getParameter("q_7")); %>
-<% int q_8 = Integer.parseInt(request.getParameter("q_8")); %>
-<% int q_9 = Integer.parseInt(request.getParameter("q_9")); %>
-<% int q_10 = Integer.parseInt(request.getParameter("q_10")); %>
-<% int q_11 = Integer.parseInt(request.getParameter("q_11")); %>
-<% int q_12 = Integer.parseInt(request.getParameter("q_12")); %>
-<% int q_13 = Integer.parseInt(request.getParameter("q_13")); %>
-<% int q_14 = Integer.parseInt(request.getParameter("q_14")); %>
-<% int q_15 = Integer.parseInt(request.getParameter("q_15")); %>
-<% int q_16 = Integer.parseInt(request.getParameter("q_16")); %>
-<% int q_17 = Integer.parseInt(request.getParameter("q_17")); %>
-<% int q_18 = Integer.parseInt(request.getParameter("q_18")); %>
-<% int q_19 = Integer.parseInt(request.getParameter("q_19")); %>
-<% int q_20 = Integer.parseInt(request.getParameter("q_20")); %>
-<% int total = (q_1+q_2+q_3+q_4+q_5+q_6+q_7+q_8+q_9+q_10+q_11+q_12+q_13+q_14+q_15+q_16+q_17+q_18+q_19+q_20); %>
+<% int total = (int) request.getAttribute("total"); %>
 
 <% String sessionNick = (String) session.getAttribute("usernick"); %>
 

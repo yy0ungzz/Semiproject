@@ -22,7 +22,7 @@ public class NutrientRecommendController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		System.out.println("nutrient/recommend [GET]");
+		System.out.println("/nutrient/recommend [GET]");
 		
 		req.getRequestDispatcher("/WEB-INF/views/recommend/nutrient_recommend.jsp").forward(req, resp);
 	}
@@ -30,14 +30,14 @@ public class NutrientRecommendController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		System.out.println("nutrient/recommend [POST]");
+		System.out.println("/nutrient/recommend [POST]");
 		
 		//영양소 진단을 통하여 질문에 대한 답 form데이터 답의 value가 2이하 인것들만 전체 조회
 		List<Nutrient> nutrientList = nutrientService.getRecommendNutrientList(req);
 		//영양소 정보가 다 불러와졌는지 확인
 		System.out.println("영양소 정보! + " + nutrientList);
 		
-		//조회결과 MODEL값 전달 - req.Attribute
+		//조회결과 MODEL값 전달 - setAttribute
 		req.setAttribute("nutrientList", nutrientList);
 		
 		//VIEW 지정 및 응답 - forward
